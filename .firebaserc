@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "tasktest-92962"
+  },
+  "targets": {
+    "tasktest-92962": {
+      "hosting": {
+        "task_test": [
+          "tasktest-92962"
+        ]
+      }
+    }
+  }
+}

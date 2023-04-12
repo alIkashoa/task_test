@@ -1,0 +1,38 @@
+<div style="width: 100%;">
+<div *ngIf="imageUrl" class="image-preview" >
+    <img id="img"  [src]="imageUrl" alt="Uploaded Image" (click)="onImageClick($event)">
+</div>
+
+</div>
+<div  class="clicked-position">
+    <div align="center" *ngIf="clickedPosition" class="position"  >Clicked Position: {{ clickedPosition?.x }}, {{ clickedPosition?.y }}</div>
+</div>
+<div>
+<div style="width: 100%;">
+<button align="center" (click)="saveImage()" *ngIf="imageUrl"   class="btn btn-primary">Save image</button>
+</div>
+</div>
+<div id="file-upload-form" class="uploader">
+  <input id="file-upload" type="file" (change)="onFileSelected($event)" />
+
+  <label for="file-upload" id="file-drag">
+   <div id="start">
+      <i class="fa fa-download" aria-hidden="true"></i>
+    <br>
+      <div id="notimage" class="hidden">Please select an image</div>
+      <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+    </div>
+    <div id="response" class="hidden">
+      <div id="messages"></div>
+      <progress class="progress" id="file-progress" value="0">
+        <span>0</span>%
+      </progress>
+    </div>
+  </label>
+</div>
+    
+
+
+
+
+
